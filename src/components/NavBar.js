@@ -1,11 +1,12 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import logo from '../assets/img/logo.svg';
+import navIcon1 from '../assets/img/nav-icon1.svg';
+import navIcon2 from '../assets/img/nav-icon2.svg';
+import navIcon3 from '../assets/img/nav-icon3.svg';
 
 import {useState, useEffect } from "react";
-
-
 
 export const NavBar = () => {
     // By default, our active link starts at home page.
@@ -39,7 +40,7 @@ export const NavBar = () => {
         setActiveLink(value);
     }
 
-    
+
 
     return (
         // The navbar's CSS format can be dynamically changed based on the
@@ -48,7 +49,7 @@ export const NavBar = () => {
             <Container>
                 /* Will add logo here later */
                 <Navbar.Brand href="#home">
-                    <img src={null} alt="Logo" />
+                    <img src={logo} alt="Logo" />
                 </Navbar.Brand>
                 
                 /* We can add our own icon */
@@ -66,9 +67,9 @@ export const NavBar = () => {
                     
                     <span className="navbar-text">
                         <div className="social-icon">
-                            <a href='#'><img src={null} alt=""/></a>
-                            <a href='#'><img src={null} alt=""/></a>
-                            <a href='#'><img src={null} alt=""/></a>
+                            <a href='#'><img src={navIcon1} alt=""/></a>
+                            <a href='#'><img src={navIcon2} alt=""/></a>
+                            <a href='#'><img src={navIcon3} alt=""/></a>
                         </div>
                         <button className="vvd" onClick={() => console.log('connect')}>
                             <span>Let's Connect</span>

@@ -52,7 +52,7 @@ export const Banner = () => {
                     <Col xs={12} md={6} xl={7}>
                         <span className="tagline">Welcome to my Portfolio</span>
                         <h1>{ "Hi I'm Donovan Tran. My profession is " }<span className="wrap"> {text} </span></h1>
-                        <p> I am an Embedded Systems Engineer passionate about designing and optimizing cutting-edge technology. With a strong foundation in hardware-software integration, I am eager to learn, innovate, and contribute to impactful projects. My goal is to join a leading tech company like NVIDIA, Google, or Amazon and help build products that shape the future. I thrive on solving complex challenges and am driven by a desire to create meaningful technology that makes a real-world impact. 🚀</p>
+                        <p> I am an Software Engineer passionate about designing and optimizing cutting-edge technology. With a strong foundation in hardware-software integration, I am eager to learn, innovate, and contribute to impactful projects. My goal is to join a leading tech company like NVIDIA, Google, or Amazon and help build products that shape the future. I thrive on solving complex challenges and am driven by a desire to create meaningful technology that makes a real-world impact. 🚀</p>
                         <button onClick={ () => console.log('connect')}> Let's connect <ArrowRightCircle size={25}/></button>
                     </Col>
 

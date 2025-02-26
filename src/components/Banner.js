@@ -9,7 +9,7 @@ export const Banner = () => {
     // List of words to display
     const [loopNum, setLoopNum] = useState(0);
     const [text, setText] = useState('');
-    const period = 2000;
+    const period = 500;
     const [isDeleting, setIsDeleting] = useState(false);
     const toRotate = [ "Embedded System Engineer", "Software Developer", "Firmware Engineer" ];
     const [delta, setDelta] = useState(300 - Math.random() * 100);

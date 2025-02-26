@@ -5,23 +5,9 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 import {useState, useEffect } from "react";
 
-useEffect(() => {
-    const onScroll = () => {
-        if (window.scrollY > 50) {
-            setScrolled(true);
-        }
-        else {
-            setScrolled(false);
-        }
-    }
-    
-    window.addEventListener('scroll', onScroll);
 
-    return () => window.removeEventListener('scroll', onScroll);
-}, []);
 
 export const NavBar = () => {
-    
     // By default, our active link starts at home page.
     const [activeLink, setActiveLink] = useState('home');
 
@@ -30,9 +16,35 @@ export const NavBar = () => {
     // By defaul, we're not scrolling anywhere
     const [scrolled, setScrolled] = useState(false);
     
+    // One time only run
+    useEffect(() => {
+        const onScroll = () => {
+            if (window.scrollY > 50) {
+                setScrolled(true);
+            }
+            else {
+                setScrolled(false);
+            }
+        }
+        
+        // Window event listener detect scrolling then it will call
+        // the registered onScroll function
+        window.addEventListener('scroll', onScroll);
     
+        return () => window.removeEventListener('scroll', onScroll);
+    }, []);
+    
+    //TODO: Why not use setActiveLink directly, why do we have to go through onUpdateActiveLink?
+    const onUpdateActiveLink = (value) => {
+        setActiveLink(value);
+    }
+
+    
+
     return (
-        <Navbar expand="lg">
+        // The navbar's CSS format can be dynamically changed based on the
+        // "scolled" state
+        <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
             <Container>
                 /* Will add logo here later */
                 <Navbar.Brand href="#home">
@@ -46,9 +58,10 @@ export const NavBar = () => {
 
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#skills">Link</Nav.Link>
-                        <Nav.Link href="#projects">Project</Nav.Link>
+                        /* On click, it will update the active link to somehwere else */
+                        <Nav.Link href="#home" className={activeLink == 'home' ? 'active-navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
+                        <Nav.Link href="#skills" className={activeLink == 'skills' ? 'active-navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Link</Nav.Link>
+                        <Nav.Link href="#projects" className={activeLink == 'projects' ? 'active-navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Project</Nav.Link>
                     </Nav>
                     
                     <span className="navbar-text">

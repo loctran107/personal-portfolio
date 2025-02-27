@@ -47,7 +47,10 @@ export const Projects = () => {
         <section className="project" id="projects"> 
             <Container>
                 <Row>
-                    <Col>
+                    <Col size={12}>
+                    <TrackVisibility>
+                        {({ isVisible }) =>
+                        <div className={isVisible ? "animate__animated animate__wobble": ""}>
                         <h2> Projects </h2>
                         <p> Below is the list of projects </p>
                         <Tab.Container id="projects-tabs" defaultActiveKey="first">
@@ -63,7 +66,7 @@ export const Projects = () => {
                             </Nav.Item>
                         </Nav>
 
-                        <Tab.Content>
+                        <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__wobble" : ""}>
                             <Tab.Pane eventKey="first">
                                 <Row>
                                     {
@@ -86,6 +89,8 @@ export const Projects = () => {
                             </Tab.Pane>
                         </Tab.Content>
                         </Tab.Container>
+                        </div>}
+                    </TrackVisibility>
                     </Col>
                 </Row>
             </Container>

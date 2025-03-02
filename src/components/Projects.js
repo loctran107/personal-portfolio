@@ -51,18 +51,17 @@ export const Projects = () => {
                     <TrackVisibility>
                         {({ isVisible }) =>
                         <div className={isVisible ? "animate__animated animate__wobble": ""}>
-                        <h2> Projects </h2>
-                        <p> Below is the list of projects </p>
+                        <h2 className="mb-3"> Projects </h2>
                         <Tab.Container id="projects-tabs" defaultActiveKey="first">
                         <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                             <Nav.Item>
-                                <Nav.Link eventKey="first">Solo Project</Nav.Link>
+                                <Nav.Link eventKey="first">Hackthon Project</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link eventKey="second">Collab Project</Nav.Link>
+                                <Nav.Link eventKey="second">Solo Project</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                                <Nav.Link eventKey="third">Collab Project</Nav.Link>
                             </Nav.Item>
                         </Nav>
 

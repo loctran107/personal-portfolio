@@ -70,11 +70,6 @@ export const Banner = () => {
                                         <span className="cv-text"> 
                                             <button> Download CV </button>
                                         </span>
-                                        <HashLink to="#connect">
-                                            <button onClick={() => console.log('connect')}>
-                                                Let's connect <ArrowRightCircle size={25} />
-                                            </button>
-                                        </HashLink>
                                     </div>
                                 )}
                             </TrackVisibility>

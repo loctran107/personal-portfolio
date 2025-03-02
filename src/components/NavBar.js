@@ -5,6 +5,7 @@ import githubIcon from '../assets/img/github_dark.png';
 import instaIcon from '../assets/img/insta-icon.svg';
 import { HashLink } from 'react-router-hash-link';
 import astronautImg from '../assets/img/header-img.svg';
+import DTLogo from '../assets/img/DT_Logo.svg';
 import {
   BrowserRouter as Router
 } from "react-router-dom";
@@ -37,7 +38,7 @@ export const NavBar = () => {
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="/">
-            <img className="astronaut-img" src={astronautImg} alt="Navigation Bar Logo" />
+            <img className="astronaut-img" src={DTLogo} alt="Navigation Bar Logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>

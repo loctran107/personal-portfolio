@@ -63,8 +63,7 @@ export const Banner = () => {
                                             I am a Software Engineer passionate about designing and optimizing 
                                             cutting-edge technology. With a strong foundation in hardware-software 
                                             integration, I am eager to learn, innovate, and contribute to impactful projects. 
-                                            My goal is to join one of the leading tech companies such as NVIDIA, Google, 
-                                            Microsoft, or Amazon and help build products that shape the future. 
+                                            My goal is to join one of the leading tech companies and help build products that shape the future. 
                                             I thrive on solving complex challenges and am driven by a desire to create 
                                             meaningful technology that makes a real-world impact. 🚀
                                         </p>

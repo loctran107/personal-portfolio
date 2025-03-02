@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import navIcon1 from '../assets/img/nav-icon1.svg';
-import navIcon2 from '../assets/img/nav-icon2.svg';
-import navIcon3 from '../assets/img/nav-icon3.svg';
+import linkedinIcon from '../assets/img/linkedin-icon.svg';
+import githubIcon from '../assets/img/github_dark.png';
+import instaIcon from '../assets/img/insta-icon.svg';
 import { HashLink } from 'react-router-hash-link';
-import headerImg from '../assets/img/header-img.svg';
+import astronautImg from '../assets/img/header-img.svg';
 import {
   BrowserRouter as Router
 } from "react-router-dom";
@@ -37,7 +37,7 @@ export const NavBar = () => {
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="/">
-            <img className="astronaut-img" src={headerImg} alt="Donovan Tran Avatar" />
+            <img className="astronaut-img" src={astronautImg} alt="Navigation Bar Logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
@@ -50,9 +50,9 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="https://www.linkedin.com/in/loctran710/"><img src={navIcon1} alt="" /></a>
-                <a href="https://www.facebook.com/profile.php?id=100007684203635"><img src={navIcon2} alt="" /></a>
-                <a href="https://www.instagram.com/donovantran__/"><img src={navIcon3} alt="" /></a>
+                <a href="https://www.linkedin.com/in/loctran710/"><img src={linkedinIcon} alt="" /></a>
+                <a href="https://www.facebook.com/profile.php?id=100007684203635"><img src={githubIcon} alt="" /></a>
+                <a href="https://www.instagram.com/donovantran__/"><img src={instaIcon} alt="" /></a>
               </div>
               <HashLink to='#connect'>
                 <button className="vvd"><span>Let’s Connect</span></button>

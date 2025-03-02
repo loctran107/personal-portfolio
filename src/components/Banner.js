@@ -67,7 +67,9 @@ export const Banner = () => {
                                             I thrive on solving complex challenges and am driven by a desire to create 
                                             meaningful technology that makes a real-world impact. 🚀
                                         </p>
-                                        <button> Download CV </button>
+                                        <span className="cv-text"> 
+                                            <button> Download CV </button>
+                                        </span>
                                         <HashLink to="#connect">
                                             <button onClick={() => console.log('connect')}>
                                                 Let's connect <ArrowRightCircle size={25} />

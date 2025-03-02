@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { ArrowRightCircle } from "react-bootstrap-icons";
 import avatar from '../assets/img/Donovan_Tran_Avatar.svg'
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import { HashLink } from 'react-router-hash-link';
 import { BrowserRouter as Router } from "react-router-dom"; // ✅ Wrap with Router
 
 export const Banner = () => {
@@ -68,7 +66,9 @@ export const Banner = () => {
                                             meaningful technology that makes a real-world impact. 🚀
                                         </p>
                                         <span className="cv-text"> 
-                                            <button> Download CV </button>
+                                            <button onClick={() => window.open('Donavan_Tran_Resume.pdf', '_blank')}>
+                                                Download CV
+                                            </button>
                                         </span>
                                     </div>
                                 )}

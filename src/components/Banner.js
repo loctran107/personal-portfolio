@@ -12,8 +12,8 @@ export const Banner = () => {
     const [text, setText] = useState('');
     const period = 500;
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = ["Embedded System Engineer", "Software Engineer", "Firmware Engineer"];
-    const [delta, setDelta] = useState(300 - Math.random() * 100);
+    const toRotate = [ "Software Engineer", "Firmware Engineer", "Embedded System Engineer"];
+    const [delta, setDelta] = useState(50 - Math.random() * 20);
 
     useEffect(() => {
         let ticker = setInterval(() => {
@@ -42,7 +42,7 @@ export const Banner = () => {
         } else if (isDeleting && updatedText === '') {
             setIsDeleting(false);
             setLoopNum(loopNum + 1);
-            setDelta(500);
+            setDelta(300);
         }
     };
 
@@ -67,6 +67,7 @@ export const Banner = () => {
                                             I thrive on solving complex challenges and am driven by a desire to create 
                                             meaningful technology that makes a real-world impact. 🚀
                                         </p>
+                                        <button> Download CV </button>
                                         <HashLink to="#connect">
                                             <button onClick={() => console.log('connect')}>
                                                 Let's connect <ArrowRightCircle size={25} />

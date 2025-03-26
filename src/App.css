@@ -423,7 +423,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px; /* Increased gap for better spacing */
+  gap: 1px; /* Increased gap for better spacing */
 }
 
 /* Ensure each column centers its card and allows it to grow */

@@ -15,31 +15,31 @@ export const Projects = () => {
       description: "AI-powered Language Learning App",
       imgUrl: sympholingo,
     },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
+    // {
+    //   title: "Business Startup",
+    //   description: "Design & Development",
+    //   imgUrl: projImg2,
+    // },
+    // {
+    //   title: "Business Startup",
+    //   description: "Design & Development",
+    //   imgUrl: projImg3,
+    // },
+    // {
+    //   title: "Business Startup",
+    //   description: "Design & Development",
+    //   imgUrl: projImg1,
+    // },
+    // {
+    //   title: "Business Startup",
+    //   description: "Design & Development",
+    //   imgUrl: projImg2,
+    // },
+    // {
+    //   title: "Business Startup",
+    //   description: "Design & Development",
+    //   imgUrl: projImg3,
+    // },
   ];
 
   // Dynamically calculate Col size based on the number of projects
@@ -78,7 +78,7 @@ export const Projects = () => {
 
                 <Tab.Content
                   id="slideInUp"
-                  className={isVisible ? "animate__animated animate__slideInUp" : ""}
+                  className={isVisible ? "animate__animated animate__wobble" : ""}
                 >
                   <Tab.Pane eventKey="first">
                     <Row className="justify-content-center">

@@ -20,7 +20,7 @@ export const Projects = () => {
       description: "Design & Development",
       imgUrl: projImg2,
     },
-    //Uncomment to test with more projects
+    // Uncomment to test with more projects
     // {
     //   title: "Business Startup",
     //   description: "Design & Development",
@@ -58,7 +58,7 @@ export const Projects = () => {
       <Container>
         <TrackVisibility>
           {({ isVisible }) => (
-            <div className={isVisible ? "animate__animated animate__wobble" : ""}>
+            <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
               <h2 className="mb-3">Projects</h2>
               <Tab.Container id="projects-tabs" defaultActiveKey="first">
                 <Nav
@@ -79,7 +79,7 @@ export const Projects = () => {
 
                 <Tab.Content
                   id="slideInUp"
-                  className={isVisible ? "animate__animated animate__wobble" : ""}
+                  className={isVisible ? "animate__animated animate__slideInUp" : ""}
                 >
                   <Tab.Pane eventKey="first">
                     <Row className="justify-content-center">

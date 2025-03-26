@@ -400,11 +400,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
   background-color: black;
 }
+
 .project h2 {
-	font-size: 45px;
-	font-weight: 700;
+  font-size: 45px;
+  font-weight: 700;
   text-align: center;
+  color: #fff; /* Ensure visibility on black background */
 }
+
 .project p {
   color: #B8B8B8;
   font-size: 18px;
@@ -414,16 +417,121 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
   width: 56%;
 }
+
+/* Center and space the cards dynamically */
+.project .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1px; /* Increased gap for better spacing */
+}
+
+/* Ensure each column centers its card and allows it to grow */
+.project .col-xs-12,
+.project .col-sm-6,
+.project .col-md-4,
+.project .col-md-3 {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1; /* Allow columns to grow to fill space */
+  max-width: none; /* Remove max-width constraint to allow full column width */
+}
+
+/* Increase the size of the project card */
+.proj-imgbx {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  width: 100%;
+  max-width: 500px; /* Increased to make cards larger */
+  aspect-ratio: 4 / 3; /* Maintain a consistent aspect ratio */
+  background: none; /* Prevent any white background */
+}
+
+/* Ensure the image fills the card */
+.proj-imgbx img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image scales properly */
+  display: block;
+  transition: transform 0.4s ease-in-out;
+  background: none; /* Prevent white background on image */
+}
+
+/* Zoom effect on hover */
+.proj-imgbx:hover img {
+  transform: scale(1.1);
+}
+
+/* Overlay for text */
+.proj-imgbx::before {
+  content: "";
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  opacity: 0.85;
+  position: absolute;
+  width: 100%;
+  height: 0;
+  top: 0; /* Start from the top */
+  left: 0;
+  transition: height 0.4s ease-in-out;
+  z-index: 1; /* Ensure the gradient is above the image but below the text */
+}
+
+.proj-imgbx:hover::before {
+  height: 100%;
+}
+
+/* Text overlay styling */
+.proj-txtx {
+  position: absolute;
+  text-align: center;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  width: 100%;
+  color: white; /* Ensure text is visible on the gradient overlay */
+  z-index: 2; /* Ensure text is above the gradient */
+}
+
+.proj-imgbx:hover .proj-txtx {
+  top: 50%;
+  opacity: 1;
+}
+
+/* Increase text size for better readability */
+.proj-txtx h4 {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1.1em;
+  margin-bottom: 10px;
+}
+
+.proj-txtx span {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+}
+
+/* Nav pills styling */
 .project .nav.nav-pills {
   width: 72%;
   margin: 0 auto;
   border-radius: 50px;
-  background-color: rgb(255 255 255 / 10%);
+  background-color: rgba(255, 255, 255, 0.1);
   overflow: hidden;
+  display: flex; /* Ensure nav items are side by side */
+  justify-content: center;
 }
+
 .project .nav.nav-pills .nav-item {
   width: 33.33333%;
 }
+
 .project .nav.nav-pills .nav-link {
   background-color: transparent;
   border-radius: 0;
@@ -437,80 +545,46 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transition: 0.3s ease-in-out;
   text-align: center;
   z-index: 0;
+  cursor: pointer; /* Ensure clickable appearance */
 }
+
 .project .nav.nav-pills .nav-link::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 100%;
-    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: 0.3s ease-in-out;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: width 0.3s ease-in-out; /* Changed to width for smoother effect */
 }
+
 .project .nav.nav-pills .nav-link.active::before {
-    width: 100% !important;
+  width: 100%;
 }
+
 .project .nav.nav-pills .nav-link.active {
-    border: 1px solid rgba(255, 255, 255, 1);
+  border: 1px solid rgba(255, 255, 255, 1);
+  color: #fff; /* Ensure active text is visible */
 }
+
 .nav-link#projects-tabs-tab-first {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 55px 0px 0px 55px;
 }
+
 .nav-link#projects-tabs-tab-second {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
+
 .nav-link#projects-tabs-tab-third {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 0 55px 55px 0;
 }
-.proj-imgbx {
-  position: relative;
-  border-radius: 30px;
-  overflow: hidden;
-  margin-bottom: 24px;
-}
-.proj-imgbx::before {
-  content: "";
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-  opacity: 0.85;
-  position: absolute;
-  width: 100%;
-  height: 0;
-  transition: 0.4s ease-in-out;
-}
-.proj-imgbx:hover::before {
-  height: 100%;
-}
-.proj-txtx {
-  position: absolute;
-  text-align: center;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: 0.5s ease-in-out;
-  opacity: 0;
-  width: 100%;
-}
-.proj-imgbx:hover .proj-txtx {
-  top: 50%;
-  opacity: 1;
-}
-.proj-txtx h4 {
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  line-height: 1.1em;
-}
-.proj-txtx span {
-  font-style: italic;
-  font-weight: 400;
-  font-size: 15px;
-  letter-spacing: 0.8px;
-}
+
+/* Background image (retained) */
 .background-image-right {
   top: 20%;
   position: absolute;

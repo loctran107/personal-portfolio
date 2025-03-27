@@ -9,38 +9,29 @@ import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
-  const projects = [
+    const hackathonProjects = [
     {
-      title: "Sympholingo",
-      description: "AI-powered Language Learning App",
-      imgUrl: sympholingo,
+        title: "Sympholingo",
+        description: "AI-powered Language Learning App",
+        imgUrl: sympholingo,
     },
-    // {
-    //   title: "Business Startup",
-    //   description: "Design & Development",
-    //   imgUrl: projImg2,
-    // },
-    // {
-    //   title: "Business Startup",
-    //   description: "Design & Development",
-    //   imgUrl: projImg3,
-    // },
-    // {
-    //   title: "Business Startup",
-    //   description: "Design & Development",
-    //   imgUrl: projImg1,
-    // },
-    // {
-    //   title: "Business Startup",
-    //   description: "Design & Development",
-    //   imgUrl: projImg2,
-    // },
-    // {
-    //   title: "Business Startup",
-    //   description: "Design & Development",
-    //   imgUrl: projImg3,
-    // },
-  ];
+    ];
+      
+    const soloProjects = [
+    {
+        title: "Portfolio Site",
+        description: "Personal website built with React",
+        imgUrl: projImg1,
+    },
+    ];
+    
+    const collabProjects = [
+    {
+        title: "Team App",
+        description: "Group project for task management",
+        imgUrl: projImg2,
+    },
+    ];
 
   // Dynamically calculate Col size based on the number of projects
   const getColSize = (projectCount) => {
@@ -50,8 +41,9 @@ export const Projects = () => {
     return { xs: 12, sm: 6, md: 3 };                          // 1 per row on extra small, 2 per row on small, 4 per row on medium for 5+ projects
   };
 
-  const colSize = getColSize(projects.length);
-
+  const hackathonColSize = getColSize(hackathonProjects.length);
+  const soloColSize = getColSize(soloProjects.length);
+  const collabColSize = getColSize(collabProjects.length);
   return (
     <section className="project" id="projects">
       <Container>
@@ -82,28 +74,60 @@ export const Projects = () => {
                 >
                   <Tab.Pane eventKey="first">
                     <Row className="justify-content-center">
-                      {projects.map((project, index) => (
+                      {hackathonProjects.map((hackathonProjects, index) => (
                         <Col
                           key={index}
-                          xs={colSize.xs}
-                          sm={colSize.sm}
-                          md={colSize.md}
+                          xs={hackathonColSize.xs}
+                          sm={hackathonColSize.sm}
+                          md={hackathonColSize.md}
                           className="d-flex justify-content-center"
                         >
                           <ProjectCard
-                            title={project.title}
-                            description={project.description}
-                            imgUrl={project.imgUrl}
+                            title={hackathonProjects.title}
+                            description={hackathonProjects.description}
+                            imgUrl={hackathonProjects.imgUrl}
                           />
                         </Col>
                       ))}
                     </Row>
                   </Tab.Pane>
                   <Tab.Pane eventKey="second">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
+                        <Row className="justify-content-center">
+                            {soloProjects.map((soloProjects, index) => (
+                                <Col
+                                key={index}
+                                xs={soloColSize.xs}
+                                sm={soloColSize.sm}
+                                md={soloColSize.md}
+                                className="d-flex justify-content-center"
+                                >
+                                <ProjectCard
+                                    title={soloProjects.title}
+                                    description={soloProjects.description}
+                                    imgUrl={soloProjects.imgUrl}
+                                />
+                                </Col>
+                            ))}
+                        </Row>
                   </Tab.Pane>
                   <Tab.Pane eventKey="third">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
+                        <Row className="justify-content-center">
+                            {collabProjects.map((collabProjects, index) => (
+                                <Col
+                                key={index}
+                                xs={collabColSize.xs}
+                                sm={collabColSize.sm}
+                                md={collabColSize.md}
+                                className="d-flex justify-content-center"
+                                >
+                                <ProjectCard
+                                    title={collabProjects.title}
+                                    description={collabProjects.description}
+                                    imgUrl={collabProjects.imgUrl}
+                                />
+                                </Col>
+                            ))}
+                        </Row>
                   </Tab.Pane>
                 </Tab.Content>
               </Tab.Container>

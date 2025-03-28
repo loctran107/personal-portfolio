@@ -3,6 +3,8 @@ import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
+import website_portfolio from "../assets/img/website-portfolio.svg";
+import chess_game from "../assets/img/tcp-ip-chess-game.svg";
 import sympholingo from "../assets/img/sympholingo.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
@@ -14,22 +16,56 @@ export const Projects = () => {
         title: "Sympholingo",
         description: "AI-powered Language Learning App",
         imgUrl: sympholingo,
+        repoUrl: "https://github.com/loctran107/Sympholingo"
     },
     ];
       
-    const soloProjects = [
-    {
-        title: "Portfolio Site",
-        description: "Personal website built with React",
-        imgUrl: projImg1,
-    },
+    const soloProjects =
+    [
+        {
+            title: "Portfolio Site",
+            description: "Personal website built with React",
+            imgUrl: website_portfolio,
+            repoUrl: "https://github.com/loctran107/personal-portfolio"
+        },
+        {
+            title: "TCP IP ChessGame",
+            description: "Terminal-based Chess Game played between two players over TCP/IP",
+            imgUrl: chess_game,
+            repoUrl: "https://github.com/loctran107/TCP_IP_ChessGame"
+        },
+        {
+            title: "Gesture Controlled Tetris Game",
+            description: "Tetris game controlled by hand gestures using OpenCV and Python",
+            imgUrl: projImg1,
+            repoUrl: "https://github.com/loctran107/Gesture_Controlled_Tetris_Game"
+        },
+        {
+            title: "ShuttleView",
+            description: "Real-time shuttle tracking application for judges and players",
+            imgUrl: projImg1,
+            repoUrl: "https://github.com/loctran107/ShuttleView"
+        },
+        {
+            title: "stockAI",
+            description: "Artificial Intelligence stock prediction application",
+            imgUrl: projImg1,
+            repoUrl: "https://github.com/loctran107/stockAI"
+        },
+        {
+            title: "LED Matrix",
+            description: "LED Matrix display controlled by a Raspberry Pi and Python",
+            imgUrl: projImg1,
+            repoUrl: "https://github.com/loctran107/Led_Matrix"
+        },
     ];
     
     const collabProjects = [
     {
-        title: "Team App",
-        description: "Group project for task management",
+        title: "BuzzBid",
+        description: "Group project for a bidding website using React and Node.js",
         imgUrl: projImg2,
+        repoUrl: "https://github.com/loctran107/buzzbid"
     },
     ];
 
@@ -58,13 +94,13 @@ export const Projects = () => {
                   id="pills-tab"
                 >
                   <Nav.Item>
-                    <Nav.Link eventKey="first">Hackthon Project</Nav.Link>
+                    <Nav.Link eventKey="first">Solo Project</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="second">Solo Project</Nav.Link>
+                    <Nav.Link eventKey="second">Collab Project</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="third">Collab Project</Nav.Link>
+                    <Nav.Link eventKey="third">Hackthon Project</Nav.Link>
                   </Nav.Item>
                 </Nav>
 
@@ -73,25 +109,6 @@ export const Projects = () => {
                   className={isVisible ? "animate__animated animate__wobble" : ""}
                 >
                   <Tab.Pane eventKey="first">
-                    <Row className="justify-content-center">
-                      {hackathonProjects.map((hackathonProjects, index) => (
-                        <Col
-                          key={index}
-                          xs={hackathonColSize.xs}
-                          sm={hackathonColSize.sm}
-                          md={hackathonColSize.md}
-                          className="d-flex justify-content-center"
-                        >
-                          <ProjectCard
-                            title={hackathonProjects.title}
-                            description={hackathonProjects.description}
-                            imgUrl={hackathonProjects.imgUrl}
-                          />
-                        </Col>
-                      ))}
-                    </Row>
-                  </Tab.Pane>
-                  <Tab.Pane eventKey="second">
                         <Row className="justify-content-center">
                             {soloProjects.map((soloProjects, index) => (
                                 <Col
@@ -105,12 +122,13 @@ export const Projects = () => {
                                     title={soloProjects.title}
                                     description={soloProjects.description}
                                     imgUrl={soloProjects.imgUrl}
+                                    repoUrl={soloProjects.repoUrl}
                                 />
                                 </Col>
                             ))}
                         </Row>
                   </Tab.Pane>
-                  <Tab.Pane eventKey="third">
+                  <Tab.Pane eventKey="second">
                         <Row className="justify-content-center">
                             {collabProjects.map((collabProjects, index) => (
                                 <Col
@@ -124,10 +142,31 @@ export const Projects = () => {
                                     title={collabProjects.title}
                                     description={collabProjects.description}
                                     imgUrl={collabProjects.imgUrl}
+                                    repoUrl={collabProjects.repoUrl}
                                 />
                                 </Col>
                             ))}
                         </Row>
+                  </Tab.Pane>
+                  <Tab.Pane eventKey="third">
+                    <Row className="justify-content-center">
+                      {hackathonProjects.map((hackathonProjects, index) => (
+                        <Col
+                          key={index}
+                          xs={hackathonColSize.xs}
+                          sm={hackathonColSize.sm}
+                          md={hackathonColSize.md}
+                          className="d-flex justify-content-center"
+                        >
+                          <ProjectCard
+                            title={hackathonProjects.title}
+                            description={hackathonProjects.description}
+                            imgUrl={hackathonProjects.imgUrl}
+                            repoUrl={hackathonProjects.repoUrl}
+                          />
+                        </Col>
+                      ))}
+                    </Row>
                   </Tab.Pane>
                 </Tab.Content>
               </Tab.Container>

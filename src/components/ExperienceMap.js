@@ -6,8 +6,8 @@ export const ExperienceMap = () => {
   const experiences = [
     {
       title: "Software Engineer",
-      company: "Tech Corp",
-      period: "2020 - Present",
+      company: "Schweitzer Engineering Laboratories",
+      period: "2021 - Present",
       description: "Developed web applications using React and Node.js",
     },
     {

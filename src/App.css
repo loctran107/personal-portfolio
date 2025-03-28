@@ -355,6 +355,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /************ Skills Css ************/
+/************ Skills Css ************/
 .skill {
   padding: 0 0 50px 0;
   position: relative;
@@ -367,8 +368,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: -60px;
 }
 .skill h2 {
-	font-size: 45px;
-	font-weight: 700;
+  font-size: 45px;
+  font-weight: 700;
 }
 .skill p {
     color: #B8B8B8;
@@ -394,6 +395,109 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
+/************ Experience Css ************/
+.experience {
+  padding: 80px 0;
+  position: relative;
+  background-color: #121212;
+}
+
+.experience-title {
+  font-size: 45px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 60px;
+}
+
+.experience-timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 40px; /* Space for the timeline line and dots */
+}
+
+/* Vertical timeline line */
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: linear-gradient(180deg, #AA367C, #4A2FBD);
+  top: 0;
+  bottom: 0;
+  left: 9px;
+  z-index: 0;
+}
+
+/* Override Bootstrap's default card background */
+.experience-item {
+  background: #1a1a1a !important; /* Slightly lighter than #121212 */
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 10px !important;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Timeline dot */
+.experience-item::before {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border-radius: 50%;
+  left: -38px;
+  top: 25px;
+  border: 2px solid #AA367C;
+  z-index: 2;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effects */
+.experience-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.experience-item:hover::before {
+  background: #AA367C;
+  transform: scale(1.2);
+}
+
+.experience-content {
+  padding: 25px;
+}
+
+/* Ensure text colors are visible on dark background */
+.experience-content h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff !important; /* Override Bootstrap's default */
+  margin-bottom: 8px;
+}
+
+.experience-content h4 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #B8B8B8 !important; /* Override Bootstrap's default */
+  margin-bottom: 8px;
+}
+
+.experience-content .period {
+  font-size: 16px;
+  font-style: italic;
+  color: #888 !important; /* Override Bootstrap's default */
+  margin-bottom: 10px;
+}
+
+.experience-content p {
+  font-size: 16px;
+  color: #B8B8B8 !important; /* Override Bootstrap's default */
+  line-height: 1.6em;
+}
 /************ Projects Css ************/
 .project {
   padding: 80px 0;

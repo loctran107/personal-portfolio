@@ -444,9 +444,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   overflow: hidden;
   margin-bottom: 24px;
   width: 100%;
-  max-width: 500px; /* Increased to make cards larger */
-  aspect-ratio: 4 / 3; /* Maintain a consistent aspect ratio */
-  background: none; /* Prevent any white background */
+  max-width: 500px;
+  aspect-ratio: 4 / 3;
+  background: none;
+  cursor: pointer; /* Add this to indicate clickability */
+}
+
+/* Optional: Add a slight scale effect on click */
+.proj-imgbx:active {
+  transform: scale(0.98);
 }
 
 /* Ensure the image fills the card */

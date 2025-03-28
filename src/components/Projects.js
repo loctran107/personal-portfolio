@@ -14,6 +14,7 @@ export const Projects = () => {
         title: "Sympholingo",
         description: "AI-powered Language Learning App",
         imgUrl: sympholingo,
+        repoUrl: "https://github.com/loctran107/Sympholingo"
     },
     ];
       
@@ -22,6 +23,7 @@ export const Projects = () => {
         title: "Portfolio Site",
         description: "Personal website built with React",
         imgUrl: projImg1,
+        repoUrl: "https://github.com/loctran107/personal-portfolio"
     },
     ];
     
@@ -30,6 +32,7 @@ export const Projects = () => {
         title: "Team App",
         description: "Group project for task management",
         imgUrl: projImg2,
+        repoUrl: "https://github.com/loctran107/buzzbid"
     },
     ];
 
@@ -86,6 +89,7 @@ export const Projects = () => {
                             title={hackathonProjects.title}
                             description={hackathonProjects.description}
                             imgUrl={hackathonProjects.imgUrl}
+                            repoUrl={hackathonProjects.repoUrl}
                           />
                         </Col>
                       ))}
@@ -105,6 +109,7 @@ export const Projects = () => {
                                     title={soloProjects.title}
                                     description={soloProjects.description}
                                     imgUrl={soloProjects.imgUrl}
+                                    repoUrl={soloProjects.repoUrl}
                                 />
                                 </Col>
                             ))}
@@ -124,6 +129,7 @@ export const Projects = () => {
                                     title={collabProjects.title}
                                     description={collabProjects.description}
                                     imgUrl={collabProjects.imgUrl}
+                                    repoUrl={collabProjects.repoUrl}
                                 />
                                 </Col>
                             ))}

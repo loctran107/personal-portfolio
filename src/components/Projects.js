@@ -3,6 +3,8 @@ import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
+import website_portfolio from "../assets/img/website-portfolio.svg";
+import chess_game from "../assets/img/tcp-ip-chess-game.svg";
 import sympholingo from "../assets/img/sympholingo.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
@@ -23,13 +25,13 @@ export const Projects = () => {
         {
             title: "Portfolio Site",
             description: "Personal website built with React",
-            imgUrl: projImg1,
+            imgUrl: website_portfolio,
             repoUrl: "https://github.com/loctran107/personal-portfolio"
         },
         {
             title: "TCP IP ChessGame",
             description: "Terminal-based Chess Game played between two players over TCP/IP",
-            imgUrl: projImg1,
+            imgUrl: chess_game,
             repoUrl: "https://github.com/loctran107/TCP_IP_ChessGame"
         },
         {

@@ -18,19 +18,44 @@ export const Projects = () => {
     },
     ];
       
-    const soloProjects = [
-    {
-        title: "Portfolio Site",
-        description: "Personal website built with React",
-        imgUrl: projImg1,
-        repoUrl: "https://github.com/loctran107/personal-portfolio"
-    },
+    const soloProjects =
+    [
+        {
+            title: "Portfolio Site",
+            description: "Personal website built with React",
+            imgUrl: projImg1,
+            repoUrl: "https://github.com/loctran107/personal-portfolio"
+        },
+        {
+            title: "TCP IP ChessGame",
+            description: "Terminal-based Chess Game played between two players over TCP/IP",
+            imgUrl: projImg1,
+            repoUrl: "https://github.com/loctran107/TCP_IP_ChessGame"
+        },
+        {
+            title: "Gesture Controlled Tetris Game",
+            description: "Tetris game controlled by hand gestures using OpenCV and Python",
+            imgUrl: projImg1,
+            repoUrl: "https://github.com/loctran107/Gesture_Controlled_Tetris_Game"
+        },
+        {
+            title: "ShuttleView",
+            description: "Real-time shuttle tracking application for judges and players",
+            imgUrl: projImg1,
+            repoUrl: "https://github.com/loctran107/ShuttleView"
+        },
+        {
+            title: "stockAI",
+            description: "Artificial Intelligence stock prediction application",
+            imgUrl: projImg1,
+            repoUrl: "https://github.com/loctran107/stockAI"
+        },
     ];
     
     const collabProjects = [
     {
-        title: "Team App",
-        description: "Group project for task management",
+        title: "BuzzBid",
+        description: "Group project for a bidding website using React and Node.js",
         imgUrl: projImg2,
         repoUrl: "https://github.com/loctran107/buzzbid"
     },

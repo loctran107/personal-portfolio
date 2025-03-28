@@ -50,6 +50,12 @@ export const Projects = () => {
             imgUrl: projImg1,
             repoUrl: "https://github.com/loctran107/stockAI"
         },
+        {
+            title: "LED Matrix",
+            description: "LED Matrix display controlled by a Raspberry Pi and Python",
+            imgUrl: projImg1,
+            repoUrl: "https://github.com/loctran107/Led_Matrix"
+        },
     ];
     
     const collabProjects = [
@@ -86,13 +92,13 @@ export const Projects = () => {
                   id="pills-tab"
                 >
                   <Nav.Item>
-                    <Nav.Link eventKey="first">Hackthon Project</Nav.Link>
+                    <Nav.Link eventKey="first">Solo Project</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="second">Solo Project</Nav.Link>
+                    <Nav.Link eventKey="second">Collab Project</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="third">Collab Project</Nav.Link>
+                    <Nav.Link eventKey="third">Hackthon Project</Nav.Link>
                   </Nav.Item>
                 </Nav>
 
@@ -101,26 +107,6 @@ export const Projects = () => {
                   className={isVisible ? "animate__animated animate__wobble" : ""}
                 >
                   <Tab.Pane eventKey="first">
-                    <Row className="justify-content-center">
-                      {hackathonProjects.map((hackathonProjects, index) => (
-                        <Col
-                          key={index}
-                          xs={hackathonColSize.xs}
-                          sm={hackathonColSize.sm}
-                          md={hackathonColSize.md}
-                          className="d-flex justify-content-center"
-                        >
-                          <ProjectCard
-                            title={hackathonProjects.title}
-                            description={hackathonProjects.description}
-                            imgUrl={hackathonProjects.imgUrl}
-                            repoUrl={hackathonProjects.repoUrl}
-                          />
-                        </Col>
-                      ))}
-                    </Row>
-                  </Tab.Pane>
-                  <Tab.Pane eventKey="second">
                         <Row className="justify-content-center">
                             {soloProjects.map((soloProjects, index) => (
                                 <Col
@@ -140,7 +126,7 @@ export const Projects = () => {
                             ))}
                         </Row>
                   </Tab.Pane>
-                  <Tab.Pane eventKey="third">
+                  <Tab.Pane eventKey="second">
                         <Row className="justify-content-center">
                             {collabProjects.map((collabProjects, index) => (
                                 <Col
@@ -159,6 +145,26 @@ export const Projects = () => {
                                 </Col>
                             ))}
                         </Row>
+                  </Tab.Pane>
+                  <Tab.Pane eventKey="third">
+                    <Row className="justify-content-center">
+                      {hackathonProjects.map((hackathonProjects, index) => (
+                        <Col
+                          key={index}
+                          xs={hackathonColSize.xs}
+                          sm={hackathonColSize.sm}
+                          md={hackathonColSize.md}
+                          className="d-flex justify-content-center"
+                        >
+                          <ProjectCard
+                            title={hackathonProjects.title}
+                            description={hackathonProjects.description}
+                            imgUrl={hackathonProjects.imgUrl}
+                            repoUrl={hackathonProjects.repoUrl}
+                          />
+                        </Col>
+                      ))}
+                    </Row>
                   </Tab.Pane>
                 </Tab.Content>
               </Tab.Container>

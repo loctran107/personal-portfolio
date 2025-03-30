@@ -7,14 +7,20 @@ export const ExperienceMap = () => {
     {
       title: "Software Engineer",
       company: "Schweitzer Engineering Laboratories",
-      period: "2021 - Present",
-      description: "Developed web applications using React and Node.js",
+      period: "Jan 2021 - Present",
+      description: "Led firmware development for 5+ embedded relay projects in C/C++, integrating Jenkins for 20% faster build deployment and boosting reliability by 15% across 10 SEL-4XX devices in 50+ power grids",
     },
     {
-      title: "Junior Developer",
-      company: "Startup Inc",
-      period: "2018 - 2020",
-      description: "Assisted in building RESTful APIs and frontend components",
+      title: "Electrical and Computer Engineering Tutor",
+      company: "Varsity Tutors",
+      period: "Sep 2020 - Dec 2020",
+      description: "Tutored 100+ students in C/C++, Java, and Python, improving assessment scores by 20%.",
+    },
+    {
+        title: "Software Engineer Intern",
+        company: "University of Washigton, Seattle",
+        period: "June 2019 - Aug 2019",
+        description: "Developed a liver-blob detection algorithm for 3D IVC modeling from ultrasound, improving accuracy by 25% across 40 scans.",
     },
   ];
 
@@ -26,9 +32,9 @@ export const ExperienceMap = () => {
           {experiences.map((exp, index) => (
             <Card key={index} className="experience-item mb-4">
               <Card.Body className="experience-content">
-                <Card.Title as="h3">{exp.title}</Card.Title>
+                <Card.Title as="h3">{exp.company}</Card.Title>
                 <Card.Subtitle as="h4" className="mb-2">
-                  {exp.company}
+                  {exp.title}
                 </Card.Subtitle>
                 <Card.Text className="period">{exp.period}</Card.Text>
                 <Card.Text>{exp.description}</Card.Text>

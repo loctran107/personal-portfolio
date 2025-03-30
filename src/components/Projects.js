@@ -6,6 +6,8 @@ import projImg3 from "../assets/img/project-img3.png";
 import website_portfolio from "../assets/img/website-portfolio.svg";
 import chess_game from "../assets/img/tcp-ip-chess-game.svg";
 import sympholingo from "../assets/img/sympholingo.png";
+import tetris from '../assets/img/tetris.svg';
+import ShuttleView from '../assets/img/ShuttleView.svg';
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -37,13 +39,13 @@ export const Projects = () => {
         {
             title: "Gesture Controlled Tetris Game",
             description: "Tetris game controlled by hand gestures using OpenCV and Python",
-            imgUrl: projImg1,
+            imgUrl: tetris,
             repoUrl: "https://github.com/loctran107/Gesture_Controlled_Tetris_Game"
         },
         {
             title: "ShuttleView",
             description: "Real-time shuttle tracking application for judges and players",
-            imgUrl: projImg1,
+            imgUrl: ShuttleView,
             repoUrl: "https://github.com/loctran107/ShuttleView"
         },
         {

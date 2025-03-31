@@ -8,7 +8,8 @@ import chess_game from "../assets/img/tcp-ip-chess-game.svg";
 import sympholingo from "../assets/img/sympholingo.png";
 import tetris from '../assets/img/tetris.svg';
 import ShuttleView from '../assets/img/ShuttleView.svg';
-import colorSharp2 from "../assets/img/color-sharp2.png";
+import stockAI from '../assets/img/stockAI.svg';
+import LedMatrix from '../assets/img/led-matrix.svg';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -51,13 +52,13 @@ export const Projects = () => {
         {
             title: "stockAI",
             description: "Artificial Intelligence stock prediction application",
-            imgUrl: projImg1,
+            imgUrl: stockAI,
             repoUrl: "https://github.com/loctran107/stockAI"
         },
         {
             title: "LED Matrix",
             description: "LED Matrix display controlled by a Raspberry Pi and Python",
-            imgUrl: projImg1,
+            imgUrl: LedMatrix,
             repoUrl: "https://github.com/loctran107/Led_Matrix"
         },
     ];

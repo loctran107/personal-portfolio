@@ -176,7 +176,6 @@ export const Projects = () => {
           )}
         </TrackVisibility>
       </Container>
-      <img className="background-image-right" src={colorSharp2} alt="Image" />
     </section>
   );
 };

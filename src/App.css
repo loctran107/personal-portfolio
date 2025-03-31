@@ -396,6 +396,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transition: all 0.3s ease-in-out;
   z-index: 1;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0; /* Start hidden */
+  transform: translateY(50px); /* Start slightly below */
+}
+
+.experience-item.animate__animated.animate__slideInUp {
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Slide to original position */
 }
 
 /* Timeline dot */
@@ -505,6 +512,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   bottom: 0;
   width: 40%;
   z-index: -4;
+}
+
+/* Background image (retained) */
+.background-image-right {
+  top: -50%;
+  position: absolute;
+  bottom: 0;
+  width: 20%;
+  left: 76%;
+  z-index: -4;
+  transform: rotate(270deg);
 }
 
 /************ Projects Css ************/
@@ -701,16 +719,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .nav-link#projects-tabs-tab-third {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 0 55px 55px 0;
-}
-
-/* Background image (retained) */
-.background-image-right {
-  top: 20%;
-  position: absolute;
-  bottom: 0;
-  width: 35%;
-  right: 0;
-  z-index: -4;
 }
 
 /************ Projects Css ************/

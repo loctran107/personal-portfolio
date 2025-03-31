@@ -10,6 +10,7 @@ import tetris from '../assets/img/tetris.svg';
 import ShuttleView from '../assets/img/ShuttleView.svg';
 import stockAI from '../assets/img/stockAI.svg';
 import LedMatrix from '../assets/img/led-matrix.svg';
+import buzzbid from "../assets/img/buzzbid.svg"; // Assuming you have a buzzbid image for the collab project
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -67,7 +68,7 @@ export const Projects = () => {
     {
         title: "BuzzBid",
         description: "Group project for a bidding website using React and Node.js",
-        imgUrl: projImg2,
+        imgUrl: buzzbid,
         repoUrl: "https://github.com/loctran107/buzzbid"
     },
     ];

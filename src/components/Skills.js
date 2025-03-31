@@ -7,6 +7,7 @@ import computer_vision from "../assets/img/computer-vision.svg";
 import embedded_system from "../assets/img/embedded-system.svg";
 import stock from "../assets/img/stock.svg";
 import colorSharp from "../assets/img/color-sharp.png";
+import colorSharp2 from "../assets/img/color-sharp2.png";
 
 
 export const Skills = () => {
@@ -72,6 +73,7 @@ export const Skills = () => {
                 </Row>
             </Container>
             <img className="background-image-left" src={colorSharp} alt="Image" />
+            <img className="background-image-right" src={colorSharp2} alt="Image" />
         </section>
     )
 }

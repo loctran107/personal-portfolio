@@ -6,7 +6,11 @@ import projImg3 from "../assets/img/project-img3.png";
 import website_portfolio from "../assets/img/website-portfolio.svg";
 import chess_game from "../assets/img/tcp-ip-chess-game.svg";
 import sympholingo from "../assets/img/sympholingo.png";
-import colorSharp2 from "../assets/img/color-sharp2.png";
+import tetris from '../assets/img/tetris.svg';
+import ShuttleView from '../assets/img/ShuttleView.svg';
+import stockAI from '../assets/img/stockAI.svg';
+import LedMatrix from '../assets/img/led-matrix.svg';
+import buzzbid from "../assets/img/buzzbid.svg"; // Assuming you have a buzzbid image for the collab project
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -37,25 +41,25 @@ export const Projects = () => {
         {
             title: "Gesture Controlled Tetris Game",
             description: "Tetris game controlled by hand gestures using OpenCV and Python",
-            imgUrl: projImg1,
+            imgUrl: tetris,
             repoUrl: "https://github.com/loctran107/Gesture_Controlled_Tetris_Game"
         },
         {
             title: "ShuttleView",
             description: "Real-time shuttle tracking application for judges and players",
-            imgUrl: projImg1,
+            imgUrl: ShuttleView,
             repoUrl: "https://github.com/loctran107/ShuttleView"
         },
         {
             title: "stockAI",
             description: "Artificial Intelligence stock prediction application",
-            imgUrl: projImg1,
+            imgUrl: stockAI,
             repoUrl: "https://github.com/loctran107/stockAI"
         },
         {
             title: "LED Matrix",
             description: "LED Matrix display controlled by a Raspberry Pi and Python",
-            imgUrl: projImg1,
+            imgUrl: LedMatrix,
             repoUrl: "https://github.com/loctran107/Led_Matrix"
         },
     ];
@@ -64,7 +68,7 @@ export const Projects = () => {
     {
         title: "BuzzBid",
         description: "Group project for a bidding website using React and Node.js",
-        imgUrl: projImg2,
+        imgUrl: buzzbid,
         repoUrl: "https://github.com/loctran107/buzzbid"
     },
     ];
@@ -174,7 +178,6 @@ export const Projects = () => {
           )}
         </TrackVisibility>
       </Container>
-      <img className="background-image-right" src={colorSharp2} alt="Image" />
     </section>
   );
 };

@@ -354,47 +354,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-right: 0.08em solid #666;
 }
 
-/************ Skills Css ************/
-/************ Skills Css ************/
-.skill {
-  padding: 0 0 50px 0;
-  position: relative;
-}
-.skill-bx {
-  background: #151515;
-  border-radius: 64px;
-  text-align: center;
-  padding: 60px 50px;
-  margin-top: -60px;
-}
-.skill h2 {
-  font-size: 45px;
-  font-weight: 700;
-}
-.skill p {
-    color: #B8B8B8;
-    font-size: 18px;
-    letter-spacing: 0.8px;
-    line-height: 1.5em;
-    margin: 14px 0 75px 0;
-}
-.skill-slider {
-  width: 80%;
-  margin: 0 auto;
-  position: relative;
-}
-.skill-slider .item img {
-  width: 50%;
-  margin: 0 auto 15px auto;
-}
-.background-image-left {
-  top: 28%;
-  position: absolute;
-  bottom: 0;
-  width: 40%;
-  z-index: -4;
-}
-
 /************ Experience Css ************/
 .experience {
   padding: 80px 0;
@@ -437,6 +396,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transition: all 0.3s ease-in-out;
   z-index: 1;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0; /* Start hidden */
+  transform: translateY(50px); /* Start slightly below */
+}
+
+.experience-item.animate__animated.animate__slideInUp {
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Slide to original position */
 }
 
 /* Timeline dot */
@@ -454,12 +420,23 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transition: all 0.3s ease-in-out;
 }
 
-/* Hover effects */
+/* Hover effects for card turning white */
 .experience-item:hover {
+  background: #fff !important; /* Change background color to white */
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 20px rgba(26, 165, 22, 0.5);
+  color: #121212; /* Set text color to dark */
 }
 
+/* Ensure text colors are visible on hover */
+.experience-item:hover .experience-content h3,
+.experience-item:hover .experience-content h4,
+.experience-item:hover .experience-content .period,
+.experience-item:hover .experience-content p {
+  color: #121212 !important; /* Ensure text is visible on white background */
+}
+
+/* Dot hover styling can be updated if necessary */
 .experience-item:hover::before {
   background: #AA367C;
   transform: scale(1.2);
@@ -496,6 +473,58 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #B8B8B8 !important; /* Override Bootstrap's default */
   line-height: 1.6em;
 }
+
+/************ Skills Css ************/
+.skill {
+  padding: 0 0 50px 0;
+  position: relative;
+}
+.skill-bx {
+  background: #151515;
+  border-radius: 64px;
+  text-align: center;
+  padding: 60px 50px;
+  margin-top: -60px;
+}
+.skill h2 {
+  font-size: 45px;
+  font-weight: 700;
+}
+.skill p {
+    color: #B8B8B8;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    margin: 14px 0 75px 0;
+}
+.skill-slider {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+.skill-slider .item img {
+  width: 50%;
+  margin: 0 auto 15px auto;
+}
+.background-image-left {
+  top: 28%;
+  position: absolute;
+  bottom: 0;
+  width: 40%;
+  z-index: -4;
+}
+
+/* Background image (retained) */
+.background-image-right {
+  top: -50%;
+  position: absolute;
+  bottom: 0;
+  width: 20%;
+  left: 76%;
+  z-index: -4;
+  transform: rotate(270deg);
+}
+
 /************ Projects Css ************/
 .project {
   padding: 80px 0;
@@ -690,16 +719,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .nav-link#projects-tabs-tab-third {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 0 55px 55px 0;
-}
-
-/* Background image (retained) */
-.background-image-right {
-  top: 20%;
-  position: absolute;
-  bottom: 0;
-  width: 35%;
-  right: 0;
-  z-index: -4;
 }
 
 /************ Projects Css ************/

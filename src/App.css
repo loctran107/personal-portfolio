@@ -362,20 +362,20 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .experience-title {
-  font-size: 45px; /* Matches other sections */
-  font-weight: 700; /* Matches other sections */
+  font-size: 45px;
+  font-weight: 700;
   color: #fff;
-  margin-bottom: 60px; /* Consistent with other sections */
+  margin-bottom: 60px;
+  text-align: center;
 }
 
 .experience-timeline {
   position: relative;
   max-width: 800px;
   margin: 0 auto;
-  padding-left: 40px; /* Space for the timeline line and dots */
+  padding-left: 40px;
 }
 
-/* Vertical timeline line */
 .experience-timeline::before {
   content: '';
   position: absolute;
@@ -387,25 +387,25 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: 0;
 }
 
-/* Override Bootstrap's default card background */
 .experience-item {
-  background: #1a1a1a !important; /* Slightly lighter than #121212 */
+  background: #1a1a1a !important;
   border: 1px solid rgba(255, 255, 255, 0.05) !important;
   border-radius: 10px !important;
   position: relative;
   transition: all 0.3s ease-in-out;
   z-index: 1;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  opacity: 0; /* Start hidden */
-  transform: translateY(50px); /* Start slightly below */
+  opacity: 0;
+  transform: translateY(50px);
+  cursor: pointer; /* Indicate clickability */
+  margin-bottom: 30px;
 }
 
 .experience-item.animate__animated.animate__slideInUp {
-  opacity: 1; /* Fade in */
-  transform: translateY(0); /* Slide to original position */
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* Timeline dot */
 .experience-item::before {
   content: '';
   position: absolute;
@@ -420,23 +420,20 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transition: all 0.3s ease-in-out;
 }
 
-/* Hover effects for card turning white */
 .experience-item:hover {
-  background: #fff !important; /* Change background color to white */
+  background: #fff !important;
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(26, 165, 22, 0.5);
-  color: #121212; /* Set text color to dark */
+  color: #121212;
 }
 
-/* Ensure text colors are visible on hover */
 .experience-item:hover .experience-content h3,
 .experience-item:hover .experience-content h4,
 .experience-item:hover .experience-content .period,
 .experience-item:hover .experience-content p {
-  color: #121212 !important; /* Ensure text is visible on white background */
+  color: #121212 !important;
 }
 
-/* Dot hover styling can be updated if necessary */
 .experience-item:hover::before {
   background: #AA367C;
   transform: scale(1.2);
@@ -446,32 +443,33 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 25px;
 }
 
-/* Ensure text colors are visible on dark background */
 .experience-content h3 {
   font-size: 24px;
   font-weight: 700;
-  color: #fff !important; /* Override Bootstrap's default */
+  color: #fff !important;
   margin-bottom: 8px;
 }
 
 .experience-content h4 {
   font-size: 18px;
   font-weight: 500;
-  color: #B8B8B8 !important; /* Override Bootstrap's default */
+  color: #B8B8B8 !important;
   margin-bottom: 8px;
 }
 
 .experience-content .period {
   font-size: 16px;
   font-style: italic;
-  color: #888 !important; /* Override Bootstrap's default */
+  color: #888 !important;
   margin-bottom: 10px;
+  display: block;
 }
 
 .experience-content p {
   font-size: 16px;
-  color: #B8B8B8 !important; /* Override Bootstrap's default */
+  color: #B8B8B8 !important;
   line-height: 1.6em;
+  margin: 0;
 }
 
 /************ Skills Css ************/

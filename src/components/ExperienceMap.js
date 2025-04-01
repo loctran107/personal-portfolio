@@ -27,7 +27,7 @@ export const ExperienceMap = () => {
   ];
 
   return (
-    <section className="experience">
+    <section className="experience" id="experience">
       <Container>
         <h2 className="experience-title text-center mb-5">Experience</h2>
         <div className="experience-timeline">

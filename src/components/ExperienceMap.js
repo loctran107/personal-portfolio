@@ -9,19 +9,19 @@ export const ExperienceMap = () => {
     {
       title: "Software Engineer",
       company: "Schweitzer Engineering Laboratories",
-      period: "Jan 2021 - Present",
+      period: "Jan 2021 - Present (4 years 4 months)",
       description: "Led firmware development for 5+ embedded relay projects in C/C++, integrating Jenkins for 20% faster build deployment and boosting reliability by 15% across 10 SEL-4XX devices in 50+ power grids",
     },
     {
       title: "Electrical and Computer Engineering Tutor",
       company: "Varsity Tutors",
-      period: "Sep 2020 - Dec 2020",
+      period: "Sep 2020 - Dec 2020 (4 months)",
       description: "Tutored 100+ students in C/C++, Java, and Python, improving assessment scores by 20%.",
     },
     {
       title: "Software Engineer Intern",
       company: "University of Washington, Seattle", // Fixed typo in "Washington"
-      period: "June 2019 - Aug 2019",
+      period: "June 2019 - Aug 2019 (2 months)",
       description: "Developed a liver-blob detection algorithm for 3D IVC modeling from ultrasound, improving accuracy by 25% across 40 scans.",
     },
   ];

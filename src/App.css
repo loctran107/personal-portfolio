@@ -384,12 +384,20 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   bottom: 0;
   left: 9px;
   z-index: 0;
-  opacity: 0; /* Start hidden for fade in */
+  opacity: 0; /* Initial state */
+  transition: opacity 0.5s ease; /* Smooth transition for initial fade */
 }
 
-/* Animation class for the timeline bar */
+/* Animation class for initial fade-in */
 .timeline-bar.animate__animated.animate__fadeIn {
   opacity: 1;
+  animation-duration: 0.5s;
+}
+
+/* Permanent visible state */
+.timeline-bar.visible {
+  opacity: 1 !important; /* Ensure it stays visible */
+  animation: none; /* Remove animation after initial fade */
 }
 
 .experience-item {
@@ -423,11 +431,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border: 2px solid #AA367C;
   z-index: 2;
   transition: all 0.3s ease-in-out;
-  opacity: 0; /* Start hidden */
-  transform: translateY(50px); /* Start position for slideInUp */
+  opacity: 0;
+  transform: translateY(50px);
 }
 
-/* Add animation for the dots when the parent card animates */
 .experience-item.animate__animated.animate__slideInUp::before {
   opacity: 1;
   transform: translateY(0);
@@ -436,7 +443,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .experience-item:hover {
   background: #fff !important;
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(26, 165, 22, 0.5);
+  box-shadow: 0 10 10px 20px rgba(26, 165, 22, 0.5);
   color: #121212;
 }
 
@@ -449,7 +456,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .experience-item:hover::before {
   background: #AA367C;
-  transform: scale(1.2); /* Keep hover effect */
+  transform: scale(1.2);
 }
 
 .experience-content {

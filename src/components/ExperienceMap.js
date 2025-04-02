@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Card } from 'react-bootstrap';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -23,6 +23,8 @@ const calculateDuration = (startDate, endDate) => {
 };
 
 export const ExperienceMap = () => {
+  const [barVisible, setBarVisible] = useState(false); // State to track bar visibility
+
   const experiences = [
     {
       title: "Software Engineer",
@@ -45,13 +47,6 @@ export const ExperienceMap = () => {
       period: "June 2019 - Aug 2019",
       description: "Developed a liver-blob detection algorithm for 3D IVC modeling from ultrasound, improving accuracy by 25% across 40 scans.",
     },
-    {
-      title: "Undergraduate Research Assistant",
-      company: "Interactive System Design Lab",
-      url: "https://idl.uw.edu/",
-      period: "Apr 2019 - Jun 2019",
-      description: "Worked on a self-proposed project on hand gesture recognition using PCA (Principal Component Analysis. Collecting statistical data to examine and determine the inference pattern of the model using Python and OpenCV",
-    },
   ];
 
   const handleCardClick = (url) => {
@@ -65,8 +60,9 @@ export const ExperienceMap = () => {
         <div className="experience-timeline position-relative">
           <TrackVisibility partialVisibility>
             {({ isVisible }) => (
-              <div 
-                className={`timeline-bar ${isVisible ? 'animate__animated animate__fadeIn' : ''}`}
+              <div
+                className={`timeline-bar ${barVisible ? 'visible' : isVisible ? 'animate__animated animate__fadeIn' : ''}`}
+                onAnimationEnd={() => setBarVisible(true)} // Set visible after animation completes
               />
             )}
           </TrackVisibility>

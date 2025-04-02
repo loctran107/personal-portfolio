@@ -443,7 +443,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .experience-item:hover {
   background: #fff !important;
   transform: translateY(-5px);
-  box-shadow: 0 10 10px 20px rgba(26, 165, 22, 0.5);
+  box-shadow: 0 10px 20px rgba(14, 188, 8, 0.5) !important; /* Corrected syntax */
   color: #121212;
 }
 

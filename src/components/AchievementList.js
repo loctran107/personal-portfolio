@@ -1,5 +1,5 @@
 // components/AchievementList.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Card } from 'react-bootstrap';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -10,6 +10,7 @@ import techfestLogo from '../assets/img/project-img2.png'; // Example path
 
 export const AchievementList = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(null); // Track animation direction
 
   const achievements = [
     {
@@ -19,7 +20,7 @@ export const AchievementList = () => {
       date: "March 2023",
       description: "Completed a 40-hour course on React.js.",
       details: "Mastered hooks, state management, and component design.",
-      logo: udemyLogo, // Add logo reference
+      logo: udemyLogo,
     },
     {
       title: "Hackathon Winner - Best AI Solution",
@@ -28,7 +29,7 @@ export const AchievementList = () => {
       date: "October 2022",
       description: "Led a team to develop an AI-powered energy optimization tool.",
       details: "Won 1st place among 50 teams.",
-      logo: techfestLogo, // Add logo reference
+      logo: techfestLogo,
     },
     {
       title: "Python for Data Science Certificate",
@@ -37,7 +38,7 @@ export const AchievementList = () => {
       date: "July 2021",
       description: "Earned a certificate after completing a comprehensive course.",
       details: "Covered Python, pandas, and machine learning basics.",
-      logo: udemyLogo, // Add logo reference
+      logo: udemyLogo,
     },
   ];
 
@@ -46,16 +47,26 @@ export const AchievementList = () => {
   };
 
   const handlePrev = () => {
+    setDirection('left');
     setCurrentIndex((prevIndex) => 
       prevIndex === 0 ? achievements.length - 1 : prevIndex - 1
     );
   };
 
   const handleNext = () => {
+    setDirection('right');
     setCurrentIndex((prevIndex) => 
       prevIndex === achievements.length - 1 ? 0 : prevIndex + 1
     );
   };
+
+  // Reset direction after animation completes
+  useEffect(() => {
+    if (direction) {
+      const timer = setTimeout(() => setDirection(null), 500); // Match transition duration
+      return () => clearTimeout(timer);
+    }
+  }, [direction]);
 
   const visibleAchievements = [
     achievements[currentIndex],
@@ -71,7 +82,11 @@ export const AchievementList = () => {
           <button className="arrow-btn left-arrow" onClick={handlePrev}>
             ◀
           </button>
-          <div className="achievement-container d-flex">
+          <div
+            className={`achievement-container d-flex ${
+              direction === 'left' ? 'slide-left' : direction === 'right' ? 'slide-right' : ''
+            }`}
+          >
             {visibleAchievements.map((ach, index) => (
               <TrackVisibility key={index} partialVisibility>
                 {({ isVisible }) => (

@@ -509,22 +509,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .achievement-list {
   position: relative;
-  max-width: 1200px; /* Increased to accommodate larger cards */
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .achievement-container {
   display: flex;
   justify-content: center;
-  gap: 30px; /* Increased gap for larger cards */
+  gap: 30px;
 }
 
 .achievement-item {
   background: #1a1a1a !important;
   border: 1px solid rgba(255, 255, 255, 0.05) !important;
   border-radius: 10px !important;
-  width: 400px; /* Increased from 300px for a bigger card */
-  min-height: 500px; /* Increased from 400px for a taller, rectangular card */
+  width: 400px;
+  min-height: 500px;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   cursor: pointer;
@@ -535,7 +535,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .achievement-item:hover {
   background: #fff !important;
   transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(255, 215, 0, 0.5) !important; /* Gold shadow */
+  box-shadow: 0 10px 20px rgba(255, 215, 0, 0.5) !important;
   color: #121212;
   transition: all 0.3s ease-out;
 }
@@ -543,67 +543,91 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .achievement-item:hover .achievement-content h3,
 .achievement-item:hover .achievement-content h4,
 .achievement-item:hover .achievement-content .date,
-.achievement-item:hover .achievement-content p {
+.achievement-item:hover .achievement-content .description,
+.achievement-item:hover .achievement-content .details {
   color: #121212 !important;
 }
 
+/* Top half: Logo */
+.achievement-logo {
+  flex: 1 1 50%; /* Takes up half the card height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #252525; /* Slightly lighter background for contrast */
+  padding: 20px;
+}
+
+.achievement-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ensures logo fits without distortion */
+}
+
+/* Bottom half: Content */
 .achievement-content {
-  padding: 30px; /* Increased padding for larger card */
-  flex-grow: 1;
+  flex: 1 1 50%; /* Takes up half the card height */
+  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .achievement-content h3 {
-  font-size: 28px; /* Increased for larger card */
+  font-size: 28px;
   font-weight: 700;
   color: #fff !important;
   margin-bottom: 10px;
 }
 
 .achievement-content h4 {
-  font-size: 20px; /* Increased for larger card */
+  font-size: 20px;
   font-weight: 500;
   color: #B8B8B8 !important;
   margin-bottom: 10px;
 }
 
 .achievement-content .date {
-  font-size: 18px; /* Increased for larger card */
+  font-size: 18px;
   font-style: italic;
   color: #888 !important;
   margin-bottom: 12px;
-  display: block;
 }
 
-.achievement-content p {
-  font-size: 18px; /* Increased for larger card */
+.achievement-content .description {
+  font-size: 18px;
   color: #B8B8B8 !important;
   line-height: 1.6em;
-  margin: 0;
+  margin-bottom: 12px;
+}
+
+.achievement-content .details {
+  font-size: 18px;
+  color: #B8B8B8 !important;
+  line-height: 1.6em;
+  font-weight: 600; /* Slightly bolder for emphasis */
 }
 
 .arrow-btn {
   background: none;
   border: none;
   color: #fff;
-  font-size: 36px; /* Increased for better visibility with larger cards */
+  font-size: 36px;
   cursor: pointer;
   padding: 0 25px;
   transition: color 0.3s ease;
 }
 
 .arrow-btn:hover {
-  color: #FFD700; /* Gold on hover */
+  color: #FFD700;
 }
 
 .left-arrow {
-  margin-right: 25px; /* Adjusted for larger layout */
+  margin-right: 25px;
 }
 
 .right-arrow {
-  margin-left: 25px; /* Adjusted for larger layout */
+  margin-left: 25px;
 }
 
 /************ Skills Css ************/

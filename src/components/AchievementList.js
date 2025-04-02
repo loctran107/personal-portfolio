@@ -4,6 +4,10 @@ import { Container, Card } from 'react-bootstrap';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
+// Placeholder logos (replace with actual image paths or URLs)
+import udemyLogo from '../assets/img/project-img1.png'; // Example path
+import techfestLogo from '../assets/img/project-img2.png'; // Example path
+
 export const AchievementList = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -13,21 +17,27 @@ export const AchievementList = () => {
       issuer: "Udemy",
       url: "https://www.udemy.com",
       date: "March 2023",
-      description: "Completed a 40-hour course on React.js, mastering hooks, state management, and component design.",
+      description: "Completed a 40-hour course on React.js.",
+      details: "Mastered hooks, state management, and component design.",
+      logo: udemyLogo, // Add logo reference
     },
     {
       title: "Hackathon Winner - Best AI Solution",
       issuer: "TechFest 2022",
       url: "https://techfest.org",
       date: "October 2022",
-      description: "Led a team to develop an AI-powered energy optimization tool, winning 1st place among 50 teams.",
+      description: "Led a team to develop an AI-powered energy optimization tool.",
+      details: "Won 1st place among 50 teams.",
+      logo: techfestLogo, // Add logo reference
     },
     {
       title: "Python for Data Science Certificate",
       issuer: "Udemy",
       url: "https://www.udemy.com",
       date: "July 2021",
-      description: "Earned a certificate after completing a comprehensive course on Python, pandas, and machine learning basics.",
+      description: "Earned a certificate after completing a comprehensive course.",
+      details: "Covered Python, pandas, and machine learning basics.",
+      logo: udemyLogo, // Add logo reference
     },
   ];
 
@@ -50,6 +60,7 @@ export const AchievementList = () => {
   const visibleAchievements = [
     achievements[currentIndex],
     achievements[(currentIndex + 1) % achievements.length],
+    achievements[(currentIndex + 2) % achievements.length],
   ];
 
   return (
@@ -70,13 +81,17 @@ export const AchievementList = () => {
                     }`}
                     onClick={() => handleCardClick(ach.url)}
                   >
+                    <div className="achievement-logo">
+                      <img src={ach.logo} alt={`${ach.issuer} logo`} />
+                    </div>
                     <Card.Body className="achievement-content">
                       <Card.Title as="h3">{ach.title}</Card.Title>
                       <Card.Subtitle as="h4" className="mb-2">
                         {ach.issuer}
                       </Card.Subtitle>
                       <Card.Text className="date">{ach.date}</Card.Text>
-                      <Card.Text>{ach.description}</Card.Text>
+                      <Card.Text className="description">{ach.description}</Card.Text>
+                      <Card.Text className="details">{ach.details}</Card.Text>
                     </Card.Body>
                   </Card>
                 )}

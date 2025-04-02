@@ -3,7 +3,6 @@ import { Container, Card } from 'react-bootstrap';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
-// Function to calculate duration between two dates
 const calculateDuration = (startDate, endDate) => {
   const start = new Date(startDate);
   const end = endDate === "Present" ? new Date() : new Date(endDate);
@@ -56,9 +55,16 @@ export const ExperienceMap = () => {
     <section className="experience" id="experience">
       <Container>
         <h2 className="experience-title text-center mb-5">Experience</h2>
-        <div className="experience-timeline">
+        <div className="experience-timeline position-relative">
+          <TrackVisibility partialVisibility>
+            {({ isVisible }) => (
+              <div 
+                className={`timeline-bar ${isVisible ? 'animate__animated animate__fadeIn' : ''}`}
+              />
+            )}
+          </TrackVisibility>
+          
           {experiences.map((exp, index) => {
-            // Split period into start and end dates
             const [startDate, endDate] = exp.period.split(' - ');
             const duration = calculateDuration(startDate, endDate);
 

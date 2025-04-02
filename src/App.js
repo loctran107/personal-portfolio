@@ -8,6 +8,7 @@ import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { ExperienceMap } from "./components/ExperienceMap"; // Add this import
+import { AchievementList } from './components/AchievementList';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Skills />
       <ExperienceMap />
       <Projects />
+      <AchievementList />
       <Contact />
       <Footer />
     </div>
